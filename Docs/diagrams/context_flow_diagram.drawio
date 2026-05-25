@@ -1,0 +1,181 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="28.0.6">
+  <diagram name="Context Flow Diagram" id="context-flow">
+    <mxGraphModel dx="1543" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Examination Duty Allotment System - Context Flow Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="20" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="central-system" value="Examination Duty&#xa;Allotment System&#xa;(EDS)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="350" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-entity" value="System Administrator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="faculty-entity" value="Faculty Members" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="email-system" value="Email System&#xa;(SMTP Server)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="database-system" value="MySQL Database&#xa;Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-device" value="Mobile Device&#xa;(iOS, Android)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="130" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cron-scheduler" value="System Scheduler&#xa;(Cron Jobs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="255" y="570" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-service" value="AI Email Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="590" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-login" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#6c8ebf;" parent="1" source="admin-entity" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="180" as="sourcePoint" />
+            <mxPoint x="450" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin-login-label" value="Login Credentials&#xa;System Commands" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="260" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#6c8ebf;dashed=1;" parent="1" source="central-system" target="admin-entity" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="380" as="sourcePoint" />
+            <mxPoint x="220" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin-response-label" value="Analytics Data&#xa;System Status" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="420" y="260" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="faculty-request" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#82b366;" parent="1" source="faculty-entity" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="580" as="sourcePoint" />
+            <mxPoint x="450" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="faculty-request-label" value="Login Credentials&#xa;Exam Selections" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="380" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="faculty-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#82b366;dashed=1;" parent="1" source="central-system" target="faculty-entity" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="410" as="sourcePoint" />
+            <mxPoint x="220" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="faculty-response-label" value="Dashboard Data&#xa;Exam Information" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="440" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-request" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;" parent="1" source="mobile-device" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="675" y="160" as="sourcePoint" />
+            <mxPoint x="580" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mobile-request-label" value="API Requests" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="545" y="230" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;dashed=1;" parent="1" source="central-system" target="mobile-device" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="350" as="sourcePoint" />
+            <mxPoint x="675" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mobile-response-label" value="JSON Data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="560" y="290" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="email-request" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;" parent="1" source="central-system" target="email-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="380" as="sourcePoint" />
+            <mxPoint x="800" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="email-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" parent="1" source="email-request-label" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="180" as="sourcePoint" />
+            <mxPoint x="650" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="email-response-label" value="Delivery Status" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="710" y="330" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="db-request" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#d6b656;" parent="1" source="central-system" target="database-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="410" as="sourcePoint" />
+            <mxPoint x="800" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="db-request-label" value="SQL Queries&#xa;Data Operations" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="700" y="420" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="db-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#d6b656;dashed=1;" parent="1" source="database-system" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="580" as="sourcePoint" />
+            <mxPoint x="650" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="db-response-label" value="Query Results&#xa;Data Records" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="680" y="480" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cron-trigger" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;" parent="1" source="cron-scheduler" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="375" y="650" as="sourcePoint" />
+            <mxPoint x="520" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cron-trigger-label" value="Scheduled Tasks&#xa;Reminders" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="400" y="530" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-request" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#d6b656;" parent="1" source="central-system" target="ai-service" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="470" as="sourcePoint" />
+            <mxPoint x="675" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ai-request-label" value="Content Generation&#xa;Requests" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="620" y="540" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-response" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#d6b656;dashed=1;" parent="1" source="ai-service" target="central-system" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="675" y="650" as="sourcePoint" />
+            <mxPoint x="580" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ai-response-label" value="Generated Content" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="520" y="510" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" value="Legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="750" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-solid" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="770" as="sourcePoint" />
+            <mxPoint x="350" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-solid-label" value="Request/Input" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="360" y="760" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dashed" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="790" as="sourcePoint" />
+            <mxPoint x="350" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-dashed-label" value="Response/Output" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="360" y="780" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f7o_iiSCwDRKvet8VHWM-1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="email-system" target="email-request-label">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="210" as="sourcePoint" />
+            <mxPoint x="613" y="363" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="email-request-label" value="Email Requests&#xa;Notifications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="640" y="260" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

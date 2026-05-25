@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/fonts/recoleta-regular.otf') format('opentype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Recoleta';
+    src: url('/fonts/recoleta-bold.otf') format('opentype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+  
+  /* Apply the font globally */
+ body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Custom styles for full height sidebar */
+.sidebar-full-height {
+  min-height: 100vh !important;
+  height: calc(100vh - 5rem) !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar-full-height {
+    min-height: calc(100vh - 5rem) !important;
+    height: calc(100vh - 5rem) !important;
+  }
+}
+
+/* Fixed sidebar on desktop */
+@media (min-width: 768px) {
+  .sidebar-full-height {
+    position: fixed !important;
+    top: 5rem !important;
+    left: 0 !important;
+    width: 16rem !important;
+    z-index: 30 !important;
+    height: calc(100vh - 5rem) !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* Ensure main content has proper scrolling */
+.main-content-scroll {
+  height: calc(100vh - 5rem);
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .main-content-scroll {
+    height: calc(100vh - 5rem);
+    margin-left: 16rem;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-full-height::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-full-height::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.sidebar-full-height::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.sidebar-full-height::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+  
